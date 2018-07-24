@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      Merging App
+    </title>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <script src="xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <hr>
+    <h3 id="errorReason">
+    </h3>
+    <hr>
+    <table id="sheet" border="1">
+      <tr>
+        <th>Serial No</th>
+        <th>Name</th>
+        <th>Company Name</th>
+        <th>Email</th>
+        <th>Phone No</th>
+      </tr>
+    </table>
+    <hr>
+    <h3 id="duplicateReason">
+    </h3>
+    <hr>
+    <script id="notifiTemplate2" type="text/template">
+        <tr>
+          <td>{{Serial}}</td>
+          <td>{{Name}}</td>
+          <td>{{Company}}</td>
+          <td>{{Email}}</td>
+          <td>{{Phone}}</td>
+        <tr>
+    </script>
+    <script id="errorTemplate" type="text/template">
+      <b>Error: <i>{{errorReason}}</i></b>
+    </script>
+    <script id="duplicateTemplate" type="text/template">
+      <b>Warning! <i>{{duplicateReason}}</i></b>
+    </script>
+    <script src="/bundle.js"></script>
+    <script src="xlsx.full.min.js"></script>
+    <script src="/js/libs/jquery-3.3.1.min.js"></script>
+    <script src="/js/libs/moment.js"></script>
+    <script src="/js/libs/mustache.js"></script>
+    <script src="/js/libs/deparam.js"></script>
+    <script src="/js/process.js"></script>
+    <script src="/js/excel.js"></script>
+    <script src="/js/excel2.js"></script>
+  </body>
+</html>
